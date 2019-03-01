@@ -55,6 +55,5 @@
     }
 
 
-
-
+[navigator对象](https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator)
 
