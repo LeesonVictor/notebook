@@ -89,6 +89,7 @@ Vue.filter("dateTimeFormat", function (date, fmt = 'yyyy-MM-dd HH:mm:ss') {  //æ
         return ''
     }
     if (typeof date === 'string') {
+        date = date.replace('T', ' ').replace('Z', '');
         date = new Date(date.replace(/-/g, '/'))
     }
     if (typeof date === 'number') {
