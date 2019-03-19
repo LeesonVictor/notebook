@@ -155,6 +155,16 @@ Vue.filter('msFormat', function (value) { // 毫秒格式化为时分秒  例：
     return h + ':' + m + ':' + s;
 });
 ```
+8. byte转K、M、G
+```javascript
+Vue.filter("bytesToSize", function (bytes) { //文件大小单位转换
+    if (bytes === 0) { return '0 B' };
+    var k = 1024;
+    var sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+    var i = Math.floor(Math.log(bytes) / Math.log(k));
+    return (bytes / Math.pow(k, i)).toPrecision(4) + ' ' + sizes[i];
+});
+```
 
 
 
