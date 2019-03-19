@@ -8,15 +8,17 @@
 
 ---
 ## object-fit
-作用：用于调节**img标签长宽**和**图片文件长宽**不匹配时的展示方式。（相当于WPF的Image的Stretch属性）
+**作用**：用于调节**img标签长宽**和**图片文件长宽**不匹配时的展示方式。（相当于WPF的Image的Stretch属性）
 
-取值：
+**取值**：
 
 - fill
 - contain
 - cover
 - none
 - scale-down
+
+**浏览器兼容性**：IE不支持
 
 ### fill  
 描述：将图片铺满整个img标签（相当于WPF中的Fill）
