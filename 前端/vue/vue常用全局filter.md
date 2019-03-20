@@ -37,7 +37,7 @@ Vue.filter("toPercent", function (val, acc) {  //小数转百分比 ，acc为保
 
 ```
 
-3. 通用键值转换
+3. 通用键值转换（数据源为数组）
 ```javascript
 
 import _ from 'underscore';
@@ -53,7 +53,7 @@ Vue.filter("keyToValueConverter", function (val, dataSource,keyname,valuename) {
 });
 
 ```
-4. 通用多键转多值
+4. 通用多键转多值（数据源为数组）
 ```javascript
 
 import _ from 'underscore';
@@ -165,7 +165,16 @@ Vue.filter("bytesToSize", function (bytes) { //文件大小单位转换
     return (bytes / Math.pow(k, i)).toPrecision(4) + ' ' + sizes[i];
 });
 ```
-
+9. 数据源是对象的键值转换
+```javascript
+    Vue.filter("objectKeyToValueConverter", function (val, keyValueObject) {
+        var isExists = _.has(keyValueObject, val);
+        if (isExists) {
+            return keyValueObject[val];
+        }
+        return "";
+    });
+```
 
 
 
