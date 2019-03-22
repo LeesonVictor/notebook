@@ -129,30 +129,48 @@ Vue.filter("dateTimeFormat", function (date, fmt = 'yyyy-MM-dd HH:mm:ss') {  //�
 });
 
 ```
-6. 毫秒转时长(例：65000ms => 1分5秒)
+6. 秒、毫秒（时长）格式化为时分秒（例：65000ms => 00:01:05）
 ```javascript
-Vue.filter("msToShow", function (value) {  //毫秒转时长。例：65000ms => 1分5秒
-    let totalS = parseInt(value / 1000);
-    let hours = parseInt(totalS / 3600);
-    let minutes = parseInt((totalS % 3600) / 60);
-    let seconds = (totalS % 3600) % 60;
-    let h = hours == 0 ? "" : `${hours}时`;
-    let m = minutes == 0 ? "" : `${minutes}分`;
-    let s = seconds == 0 ? "" : `${seconds}秒`;
-    return h + m + s;
-});
+    //秒、毫秒转时分秒显示  例：65000 => 00:01:05
+    //参数：isMs 是否是毫秒；dft：默认显示
+    Vue.filter('timeLongFormat', function (value, isMs=false,dft = '00:00:00') { 
+        let total = parseInt(value);
+        if (!isNaN(total)) {
+            if (isMs) {
+                total = total/1000;
+            }
+            let hours = parseInt(total / 3600);
+            let minutes = parseInt((total % 3600) / 60);
+            let seconds = parseInt((total % 3600) % 60);
+            let h = hours > 9 ? hours : '0' + hours;
+            let m = minutes > 9 ? minutes : '0' + minutes;
+            let s = seconds > 9 ? seconds : '0' + seconds;
+            return h + ':' + m + ':' + s;
+        }
+        else {
+            return dft;
+        }      
+    });
 ```
-7. 毫秒格式化为时分秒（例：65000ms => 00:01:05）
+7.秒、毫秒（时长）格式化为时分秒(中文)（例：65000ms => 1分5秒）
 ```javascript
-Vue.filter('msFormat', function (value) { // 毫秒格式化为时分秒  例：65000ms => 00:01:05
-    let totalS = parseInt(value / 1000);
-    let hours = parseInt(totalS / 3600);
-    let minutes = parseInt((totalS % 3600) / 60);
-    let seconds = (totalS % 3600) % 60;
-    let h = hours > 9 ? hours : '0' + hours;
-    let m = minutes > 9 ? minutes : '0' + minutes;
-    let s = seconds > 9 ? seconds : '0' + seconds;
-    return h + ':' + m + ':' + s;
+Vue.filter("timeLongFormat_zh", function (valuevalue, isMs = false, dft = '--') {
+    let total = parseInt(value);
+    if (!isNaN(total)) {
+        if (isMs) {
+            total = total / 1000;
+        }
+        let hours = parseInt(total / 3600);
+        let minutes = parseInt((total % 3600) / 60);
+        let seconds = parseInt((total % 3600) % 60);
+        let h = hours == 0 ? "" : `${hours}时`;
+        let m = minutes == 0 ? "" : `${minutes}分`;
+        let s = seconds == 0 ? "" : `${seconds}秒`;
+        return h + m + s;
+    }
+    else {
+        return dft;
+    }
 });
 ```
 8. byte转K、M、G
