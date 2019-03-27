@@ -4,24 +4,30 @@
 
 ---
 
+- [vscode使用](#vscode使用)
+  - [常用前端开发插件](#常用前端开发插件)
+    - [通用](#通用)
+    - [HTML](#html)
+    - [JS](#js)
+    - [VUE](#vue)
+  - [常用markdown插件](#常用markdown插件)
+
 ## 常用前端开发插件
 
 ### 通用
 
 - chinese(simplified) langwage pack for visual studio code ：中文语言包
-
 - vscode-pdf ：查看pdf
   
 ### HTML
 
-- auto close tag ：帮助自动补齐html闭合标签
-  
+- auto close tag ：帮助自动补齐html闭合标签  
 - auto rename tag ：重命名标签时，自动重命名闭合标签
   
 ### JS
   
-- eslint ：es语法检查工具，带部分代码风格检查（一般会禁用，而用prettier代码风格。注：一般有三种代码风格：standard、airbnb、prettier,其中prettier用得最多）
-
+- eslint ：es语法检查工具，带部分代码风格检查（一般会禁用，而用prettier代码风格）。
+  注：一般有三种代码风格：standard、airbnb、prettier,其中prettier用得最多。
 - javascript(es6) code snippets ：es6常用代码段
 
 ### VUE
@@ -30,12 +36,15 @@
 
 ## 常用markdown插件
 
-- markdown all in one  ：markdown常用快捷键、代码段等诸多功能
-
+- markdown all in one  ：
+  - 生成/更新目录（命令Create/Update  Table of Contents,若要生成的目录兼容github,需勾选设置里的githubCompatibility）
+  - 常用快捷键加粗、斜体等
+  - 格式化table。alt+shift+f
+  - 支持特殊数学符号渲染
+  - 一边书写一边预览(Ctrl + Shift + V or Ctrl + K V) (markdown preview enhanced有此功能)
+  - 导出html，命令Print current document to HTML（markdown pdf有此功能，且可以导出pdf、json等）
+  - ...
 - markdown preview enhanced ：优化markdown预览
-
-- markdown toc ：右键可自动生成目录，若生成中有aoto等乱码，需将vscode的默认行尾字符（Eol）设为\n。
-
 - markdown pdf ：支持将.md文件导出为pdf、html等多种格式
-
 - markdownlint ：markdown的格式检查
+- ~~markdown toc~~(markdown all in one已带此功能) ：右键可自动生成目录，若生成中有aoto等乱码，需将vscode的默认行尾字符（Eol）设为\n。
