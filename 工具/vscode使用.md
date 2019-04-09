@@ -11,6 +11,7 @@
     - [JS](#js)
     - [VUE](#vue)
   - [常用markdown插件](#常用markdown插件)
+  - [用户设置和工作去设置的区别](#用户设置和工作去设置的区别)
 
 ## 常用前端开发插件
 
@@ -48,3 +49,13 @@
 - markdown pdf ：支持将.md文件导出为pdf、html等多种格式
 - markdownlint ：markdown的格式检查
 - ~~markdown toc~~(markdown all in one已带此功能) ：右键可自动生成目录，若生成中有aoto等乱码，需将vscode的默认行尾字符（Eol）设为\n。
+
+## 用户设置和工作去设置的区别
+
+用户设置全局生效。工作区设置只在该工作区生效。
+工作区的存在可以避免加载过多无用的插件。特定工作去只加载特定的插件。比如java工作区只加载jiava相关的插件。
+要新建一个工作区通过文件菜单下将工作区另存为即可。
+
+     "files.autoSave": "onFocusChange" //当失去焦点时自动保存
+
+[添加代码段](https://www.cnblogs.com/summit7ca/p/5225494.html)

@@ -24,7 +24,7 @@
      if (Sys.safari) return ('Safari: ' + Sys.safari);
      return 'Unkonwn';
     }
-    
+
     
     function getExploreName(){
        var userAgent = navigator.userAgent;
