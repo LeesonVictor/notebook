@@ -69,10 +69,10 @@ function getCsvBlob(headers, rows) {
                             return pre ? pre + columnDelimiter + cell : pre + cell;
                         }
                     }
-                    return pre ? pre + columnDelimiter + "" : pre + "";
+                    return pre ? pre + columnDelimiter : pre + " ";//reduce初始值为''，故第一次迭代时不会在行首加列分隔符。后面的遇到值为空或不存在的列要填充含空格的空白" ",则pre返回true，会加列分隔符
                 }
                 else {
-                    return pre;
+                    return pre ? pre + columnDelimiter : pre + " ";//即使不存在该列也要填充空白，避免数据和表头错位不对应
                 }
             }, '');
             return previous + rowDelimiter + rowCsv;
