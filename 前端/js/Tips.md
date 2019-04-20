@@ -6,8 +6,9 @@
 
 ## var 和 let的区别
 
-var: 最小作用域为函数
-let：最小作用于域为块（大括号）
+- var最小作用域为函数，let最小作用于域为块（大括号）
+- 声明在全局的var变量可以通过 `window.变量名` 取到,而let则不能通过`window.变量名` 取到
+
 
 ## querySelectorAll 和 getElementsBy 系列方法的区别
 
