@@ -28,7 +28,7 @@
   .demo input[type="text"]{color: blue;} /*特殊性值：0,0,2,1*/
   .demo *[type="text"]{color: grey;} /*特殊性值：0,0,2,0*/
   #demo a{color: orange;} /*特殊性值：0,1,0,1*/
-  div#demo a{color: red;} /*特殊性值：0,1,0,2*
+  div#demo a{color: red;} /*特殊性值：0,1,0,2*/
 ```
 
 注： 因为就近原则 :link、:visited、:hover、:active,必须按此顺序声明。因为在hover状态时肯定是link状态，在active状态时肯定是link和hover状态

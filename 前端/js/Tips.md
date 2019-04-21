@@ -4,6 +4,15 @@
 
 ---
 
+- [Tips](#tips)
+  - [var 和 let的区别](#var-和-let的区别)
+  - [querySelectorAll 和 getElementsBy 系列方法的区别](#queryselectorall-和-getelementsby-系列方法的区别)
+    - [延伸：NodeList和HTMLCollection的区别](#延伸nodelist和htmlcollection的区别)
+    - [node和element的区别](#node和element的区别)
+  - [sessionStorage、localStorage、cookie的区别](#sessionstoragelocalstoragecookie的区别)
+
+---
+
 ## var 和 let的区别
 
 var: 最小作用域为函数
@@ -26,3 +35,22 @@ getElementsByClassName、getElementsByTagName返回值是一个 **动态的** HT
 
 [https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType)
 [https://www.cnblogs.com/ron123/p/3764393.html](https://www.cnblogs.com/ron123/p/3764393.html)
+
+## sessionStorage、localStorage、cookie的区别
+
+- sessionStorage标签页关闭就销毁，localStorage主动清除浏览器缓存才销毁
+- sessionStorage不能跨标签页，localStorage可以跨标签页。
+  
+ ```javascript
+ window.addEventListener("storage", function(e) {//监听localstorage变化事件,开两个页面时保持登录状态同步，避免session覆盖
+      if (e.key == USER_INFO) {
+        if (e.oldValue != e.newValue) {
+          window.location.reload();
+        }
+      }
+      let userinfo = getLocalStore(USER_INFO);
+      if(userinfo == null){
+         window.location.reload();
+      }
+    });
+ ```

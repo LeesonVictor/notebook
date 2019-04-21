@@ -49,6 +49,14 @@
 
 ### text-overflow
 
+- 作用：规定当文本溢出包含元素时发生的事情。
+- 取值：
+  | 值                                    | 描述                                 |
+  | ------------------------------------- | ------------------------------------ |
+  | clip(默认值)                          | 修剪文本                             |
+  | ellipsis                              | 显示省略符号来代表被修剪的文本。     |
+  | 任意string(只在 Firefox 浏览器下有效) | 使用给定的字符串来代表被修剪的文本。 |
+
 ### text-wrap(目前主流浏览器都不支持)
 
 ---
@@ -65,13 +73,15 @@
 浏览器一般默认实现了中文和英文的1，而在一个词一整行也放不下时，浏览器默认会让文本超出容器显示。
 只需加上`overflow-wrap:break-word`即可实现英文2。
 
-### 实现文本不换行，以三个点表示超出的部分
+### 实现文本不换行，以省略号表示超出的部分
 
 ```css
   overflow: hidden;
   white-space: nowrap;<!-不换行 ->
-  text-overflow:ellipsis;<!-超出部分三个点显示 ->
+  text-overflow:ellipsis;<!-超出部分显示省略号 ->
 ```
+
+![https://github.com/LeesonVictor/notebook/blob/master/images/20190415101358.png?raw=true](https://github.com/LeesonVictor/notebook/blob/master/images/20190415101358.png?raw=true)
 
 ## 参考资料
 
