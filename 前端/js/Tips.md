@@ -15,8 +15,10 @@
 
 ## var 和 let的区别
 
-var: 最小作用域为函数
-let：最小作用于域为块（大括号）
+- var最小作用域为函数，let、const最小作用于域为块（大括号）
+- 声明在全局的var变量可以通过 `window.变量名` 取到,而let、const则不能通过`window.变量名` 取到。
+- var会变量提升(声明提升，赋值不提升)，而let、const不会提升。
+- const用于定义不可更改的常量（声明时赋值，后不可重新赋值，但可更改其内部属性的值。变量名全大写）
 
 ## querySelectorAll 和 getElementsBy 系列方法的区别
 
