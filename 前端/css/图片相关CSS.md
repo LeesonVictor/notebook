@@ -5,13 +5,13 @@
 ---
 <!-- TOC -->
 
-- [图片相关CSS](#%E5%9B%BE%E7%89%87%E7%9B%B8%E5%85%B3css)
+- [图片相关CSS](#图片相关css)
   - [object-fit](#object-fit)
-    - [作用](#%E4%BD%9C%E7%94%A8)
-    - [浏览器兼容性](#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7)
-    - [取值](#%E5%8F%96%E5%80%BC)
-    - [原理](#%E5%8E%9F%E7%90%86)
-    - [参考资料](#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
+    - [作用](#作用)
+    - [浏览器兼容性](#浏览器兼容性)
+    - [取值](#取值)
+    - [原理](#原理)
+    - [参考资料](#参考资料)
 
 <!-- /TOC -->
 
@@ -77,7 +77,7 @@ IE不支持
    }
    ```
 
-   ![图1-1](https://github.com/LeesonVictor/notebook/blob/master/images/css_imagecss_object_fit.png?raw=true)
+   ![图1-1](https://github.com/LeesonVictor/notebook/blob/master/images/%E5%9B%BE%E7%89%87/css_imagecss_object_fit.png?raw=true)
 
 3. cover
 
