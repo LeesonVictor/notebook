@@ -18,12 +18,14 @@
 ### 通用
 
 - chinese(simplified) langwage pack for visual studio code ：中文语言包
+- code runner : 跑各种语言的代码（可用于写小Demo测试）
 - vscode-pdf ：查看pdf
   
 ### HTML
 
 - auto close tag ：帮助自动补齐html闭合标签  
 - auto rename tag ：重命名标签时，自动重命名闭合标签
+- open in browser : 在默认浏览器中打开html文件
   
 ### JS
   
