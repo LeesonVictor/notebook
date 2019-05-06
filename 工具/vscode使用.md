@@ -20,7 +20,7 @@
 ### 通用
 
 - chinese(simplified) langwage pack for visual studio code ：中文语言包
-- code runner : 跑各种语言的代码（可用于写小Demo测试）
+- code runner : 跑各种语言的代码（可用于写小Demo测试）,跑js也可以直接在浏览器Console里跑。shift+enter可以输入多行代码。
 - vscode-pdf ：查看pdf
   
 ### HTML

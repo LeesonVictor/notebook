@@ -27,7 +27,7 @@ getElementsByClassName、getElementsByTagName返回值是一个 **动态的** HT
 
 ### 延伸：NodeList和HTMLCollection的区别
 
-- dom结构改变时不会受影响，NodeList不会受影响，HTMLCollection会跟随改变。
+- dom结构改变时不会受影响，先前生成的NodeList不会受影响(某一时刻的快照)，HTMLCollection会跟随改变。
 - NodeList中包含所有node(包括element、attribute、text等)，HTMLCollection中只包含element。
 
 ### node和element的区别
