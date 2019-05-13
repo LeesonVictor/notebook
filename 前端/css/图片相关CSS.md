@@ -76,7 +76,7 @@ IE不支持
    }
    ```
 
-   ![图1-1](https://github.com/LeesonVictor/notebook/blob/master/images/%E5%9B%BE%E7%89%87/css_imagecss_object_fit.png?raw=true)
+   ![图1-1](https://github.com/LeesonVictor/notebook/blob/master/images/%E5%9B%BE%E7%89%87/%E5%9B%BE%E7%89%87object-fit.png?raw=true)
 
 3. cover
 

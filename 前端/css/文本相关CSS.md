@@ -105,7 +105,8 @@
   text-overflow:ellipsis;<!-超出部分显示省略号 ->
 ```
 
-![https://github.com/LeesonVictor/notebook/blob/master/images/%E5%9B%BE%E7%89%87/20190415101358.png?raw=true](https://github.com/LeesonVictor/notebook/blob/master/images/%E5%9B%BE%E7%89%87/20190415101358.png?raw=true)
+效果如下：
+![https://github.com/LeesonVictor/notebook/blob/master/images/%E5%9B%BE%E7%89%87/%E6%96%87%E6%9C%AC%E8%B6%85%E5%87%BA%E7%9C%81%E7%95%A5%E5%8F%B7%E6%95%88%E6%9E%9C%E5%9B%BE.png?raw=true](https://github.com/LeesonVictor/notebook/blob/master/images/%E5%9B%BE%E7%89%87/%E6%96%87%E6%9C%AC%E8%B6%85%E5%87%BA%E7%9C%81%E7%95%A5%E5%8F%B7%E6%95%88%E6%9E%9C%E5%9B%BE.png?raw=true)
 
 ## 参考资料
 
