@@ -397,7 +397,7 @@ token需要同时放在表单和Session中。在提交请求时，服务器只�
 
 简单请求：
 1.请求方法只能为GET、POST、HEAD。
-2.请求头只能包含Accecpt、Accecpt-Language、Content-Language、Content-Language、Content-Type
+2.请求头只能包含Accecpt、Accecpt-Language、Content-Language、Content-Type
 3.若头部包含Content-Type，则只能为text/plain、multipart/form-data、application/x-www-form-urlencoded
 
 非简单请求：不符合简单请求的就是非简单请求。
@@ -451,7 +451,7 @@ Access-Control-Allow-Credentials: true
 ##### 加密分类
 
 - 对称加密————通信双方用同一把共享密钥加密解密，缺点是容易传输中被人截获
-- 非对称加密————有公钥私钥两把钥匙，公钥公开给别人，私钥自己留着。当用公钥加密、私钥解密时用于加密；私钥加密，公钥解密时用于验证。
+- 非对称加密————有公钥私钥两把钥匙，公钥公开给别人，私钥自己留着。当用公钥加密、私钥解密时用于加解密；私钥加密，公钥解密时用于验证。
 - 摘要（严格来说不属于加密）————常见的MD5用于获取数据的128位散列值，而根据散列值却很难推出原始数据。
 
 HTTPS中加密采用非对称加密传输共享密钥给对方，之后用该共享密钥采用对称加密传输具体数据。因为非对称加密更耗时和资源。
