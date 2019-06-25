@@ -66,6 +66,7 @@
     - [网关](#网关)
     - [隧道](#隧道)
   - [性能优化方面的应用](#性能优化方面的应用)
+  - [思维导图](#思维导图)
 
 ---
 
@@ -517,3 +518,7 @@ HTTPS中加密采用非对称加密传输共享密钥给对方，之后用该共
 - 压缩。最好压缩文本，音视频等格式压缩率低，还浪费cpu等资源。
 - js放页面底部
 - 图片懒加载
+
+## 思维导图
+
+![https://github.com/LeesonVictor/notebook/blob/master/images/%E5%9B%BE%E7%89%87/HTTP%E5%8D%8F%E8%AE%AE.png?raw=true](https://github.com/LeesonVictor/notebook/blob/master/images/%E5%9B%BE%E7%89%87/HTTP%E5%8D%8F%E8%AE%AE.png?raw=true)
