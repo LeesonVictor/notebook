@@ -5,7 +5,7 @@
 ---
 
 - [《javascript面向对象编程指南》读书笔记](#javascript面向对象编程指南读书笔记)
-  - [第一章 面向对象的JavaScript](#第一章-面向对象的javascript)
+  - [第一章 面向对象的JavaScript](#第一章-面向对象的JavaScript)
   - [第二章 基本数据类型与流程控制](#第二章-基本数据类型与流程控制)
     - [变量](#变量)
     - [数据类型](#数据类型)
@@ -20,8 +20,8 @@
       - [数组](#数组)
         - [数组元素的增删改查](#数组元素的增删改查)
         - [多维数组](#多维数组)
-      - [Map（ES6规范）](#mapes6规范)
-      - [Set（ES6规范）](#setes6规范)
+      - [Map（ES6规范）](#MapES6规范)
+      - [Set（ES6规范）](#SetES6规范)
     - [流程控制](#流程控制)
       - [条件语句](#条件语句)
       - [循环语句](#循环语句)
@@ -55,64 +55,64 @@
       - [对象作为参数传递](#对象作为参数传递)
       - [比较对象](#比较对象)
     - [内建对象](#内建对象)
-      - [Object](#object)
-      - [Array](#array)
+      - [Object](#Object)
+      - [Array](#Array)
         - [length属性](#length属性)
         - [一些内建方法](#一些内建方法)
-      - [Function](#function)
+      - [Function](#Function)
         - [函数对象的内建属性：](#函数对象的内建属性)
         - [call和apply](#call和apply)
-      - [Boolean](#boolean)
-      - [Number](#number)
-      - [String](#string)
-      - [Math](#math)
-      - [Date](#date)
-      - [RegExp](#regexp)
+      - [Boolean](#Boolean)
+      - [Number](#Number)
+      - [String](#String)
+      - [Math](#Math)
+      - [Date](#Date)
+      - [RegExp](#RegExp)
         - [replace](#replace)
         - [回调式替换](#回调式替换)
-      - [Error对象](#error对象)
+      - [Error对象](#Error对象)
   - [第五章 原型](#第五章-原型)
     - [原型属性](#原型属性)
     - [原型对象上的属性和方法](#原型对象上的属性和方法)
     - [原型链](#原型链)
     - [枚举属性](#枚举属性)
-    - [isPrototypeOf()](#isprototypeof)
+    - [isPrototypeOf()](#isPrototypeOf)
     - [\_\_proto\_\_](#__proto__)
     - [原型作用](#原型作用)
     - [原型陷阱](#原型陷阱)
   - [第六章 继承](#第六章-继承)
     - [实现方法1](#实现方法1)
     - [实现方法2](#实现方法2)
-    - [ES6中继承写法](#es6中继承写法)
+    - [ES6中继承写法](#ES6中继承写法)
   - [第七章 浏览器环境](#第七章-浏览器环境)
-    - [BOM（浏览器对象模型）](#bom浏览器对象模型)
+    - [BOM（浏览器对象模型）](#BOM浏览器对象模型)
       - [window对象](#window对象)
         - [window.navigator](#windownavigator)
         - [window.location](#windowlocation)
         - [window.history](#windowhistory)
-        - [H5中history的API](#h5中history的api)
+        - [H5中history的API](#H5中history的API)
         - [window.frames](#windowframes)
         - [window.screen](#windowscreen)
         - [window.open/window.close](#windowopenwindowclose)
-        - [window.moveTo()、window.moveBy()、window.resizeTo()、window.resizeBy()](#windowmovetowindowmovebywindowresizetowindowresizeby)
+        - [window.moveTo()、window.moveBy()、window.resizeTo()、window.resizeBy()](#windowmoveTowindowmoveBywindowresizeTowindowresizeBy)
         - [window.alert()、window.confirm()、window.prompt()](#windowalertwindowconfirmwindowprompt)
-        - [window.setTimeout()、window.setInterval()](#windowsettimeoutwindowsetinterval)
+        - [window.setTimeout()、window.setInterval()](#windowsetTimeoutwindowsetInterval)
         - [window.document](#windowdocument)
-    - [DOM(文档对象模型)](#dom文档对象模型)
-      - [DOM节点的访问](#dom节点的访问)
+    - [DOM(文档对象模型)](#DOM文档对象模型)
+      - [DOM节点的访问](#DOM节点的访问)
         - [方法一 索引访问法](#方法一-索引访问法)
         - [方法二 快捷访问法](#方法二-快捷访问法)
-      - [DOM节点的修改](#dom节点的修改)
-      - [DOM节点的新建](#dom节点的新建)
-      - [DOM节点的移除](#dom节点的移除)
-      - [只适用于HTML的DOM对象](#只适用于html的dom对象)
+      - [DOM节点的修改](#DOM节点的修改)
+      - [DOM节点的新建](#DOM节点的新建)
+      - [DOM节点的移除](#DOM节点的移除)
+      - [只适用于HTML的DOM对象](#只适用于HTML的DOM对象)
     - [事件](#事件)
       - [注册事件三种方式](#注册事件三种方式)
       - [捕捉法和冒泡法](#捕捉法和冒泡法)
       - [阻断冒泡](#阻断冒泡)
       - [防止默认行为](#防止默认行为)
       - [事件类型](#事件类型)
-    - [XMLHttpRequest对象](#xmlhttprequest对象)
+    - [XMLHttpRequest对象](#XMLHttpRequest对象)
 
 ---
 
@@ -184,13 +184,13 @@
 
 ##### 转义字符
 
-|字符串|含义|
-|---|---|
-|\\\\、\\'、\\"|由于\\、'、"在js中是关键符号，所以需要转义|
-|\\n|换行符|
-|\\r|回车符|
-|\\t|制表符|
-|\\u|\\u后面的字符将会被视为Unicode码|
+| 字符串         | 含义                                       |
+| -------------- | ------------------------------------------ |
+| \\\\、\\'、\\" | 由于\\、'、"在js中是关键符号，所以需要转义 |
+| \\n            | 换行符                                     |
+| \\r            | 回车符                                     |
+| \\t            | 制表符                                     |
+| \\u            | \\u后面的字符将会被视为Unicode码           |
 
 #### bool值
 
@@ -215,16 +215,16 @@
 
 ##### 比较运算符
 
-|操作符|名称|说明|例子|
-|---|---|---|---|---|
-|==|相等运算符||`null == undefined;//true`<br>`'1'==true; //true`<br> `'1'==1; //true`|
-|===|严格相等运算符|类型相同&&值相同|`null === undefined; //false`<br>`1 === '1'; //false`|
-|!=|不相等运算符||`NaN!=NaN;//true`<br>`'1'!=1; //false`|
-|!==|严格不相等运算符||`'1'!==1; //true`|
-|>|大于运算符||`'2'>1 ;//true`|
-|>=|大于等于运算符||`1>='1'; //true`|
-|<|小于运算符||`1<'2'; //true`|
-|<=|小于等于运算符||`1<='1'; //true`|
+| 操作符 | 名称             | 说明             | 例子                                                                   |
+| ------ | ---------------- | ---------------- | ---------------------------------------------------------------------- |  |
+| ==     | 相等运算符       |                  | `null == undefined;//true`<br>`'1'==true; //true`<br> `'1'==1; //true` |
+| ===    | 严格相等运算符   | 类型相同&&值相同 | `null === undefined; //false`<br>`1 === '1'; //false`                  |
+| !=     | 不相等运算符     |                  | `NaN!=NaN;//true`<br>`'1'!=1; //false`                                 |
+| !==    | 严格不相等运算符 |                  | `'1'!==1; //true`                                                      |
+| >      | 大于运算符       |                  | `'2'>1 ;//true`                                                        |
+| >=     | 大于等于运算符   |                  | `1>='1'; //true`                                                       |
+| <      | 小于运算符       |                  | `1<'2'; //true`                                                        |
+| <=     | 小于等于运算符   |                  | `1<='1'; //true`                                                       |
 
 注意：
   
@@ -280,14 +280,14 @@
   ```
 
 - 操作：
-  |属性/方法|作用|
-  |---|---|
-  |size|返回成员数量|
-  |clear()|清空所有成员，无返回值|
-  |has(key)|判断是否存在指定成员，返回值为 true / false|
-  |get(key)|获取指定成员的值，如不存在则返回 undefined|
-  |set(key, value)|为key设置键值，如已经存在该key则更新，否则添加新元素，返回值是实例本身|
-  |delete(key)|删除key的键值对，返回值为 true / false|
+  | 属性/方法       | 作用                                                                   |
+  | --------------- | ---------------------------------------------------------------------- |
+  | size            | 返回成员数量                                                           |
+  | clear()         | 清空所有成员，无返回值                                                 |
+  | has(key)        | 判断是否存在指定成员，返回值为 true / false                            |
+  | get(key)        | 获取指定成员的值，如不存在则返回 undefined                             |
+  | set(key, value) | 为key设置键值，如已经存在该key则更新，否则添加新元素，返回值是实例本身 |
+  | delete(key)     | 删除key的键值对，返回值为 true / false                                 |
 - 注意：map的键必须唯一，若加入重复的键，后面的值会冲掉前面的值。
 
 #### Set（ES6规范）
@@ -302,13 +302,13 @@
   ```
 
 - 操作：
-  |属性/方法|作用|
-  |---|---|
-  |size|返回成员数量|
-  |clear()|清空所有成员，无返回值|
-  |has(ele)|判断是否存在指定成员，返回值为 true / false|
-  |add(ele)|添加元素ele，如果已经存在，没有变动，否则添加，返回值是实例本身|
-  |delete(ele)|删除某个值，返回值为 true / false|
+  | 属性/方法   | 作用                                                            |
+  | ----------- | --------------------------------------------------------------- |
+  | size        | 返回成员数量                                                    |
+  | clear()     | 清空所有成员，无返回值                                          |
+  | has(ele)    | 判断是否存在指定成员，返回值为 true / false                     |
+  | add(ele)    | 添加元素ele，如果已经存在，没有变动，否则添加，返回值是实例本身 |
+  | delete(ele) | 删除某个值，返回值为 true / false                               |
 - 注意：
   
   1. Set中的值必须唯一，重复的会自动保留一个。（map键、set重复的标准：值类型必须值严格相等，引用类型必须引用同一个对象）
@@ -734,11 +734,11 @@ next();//输出"c"
 
 ### js中对象与数组的区别
 
-|键类型|数据类型|
-|:---:|:---:|
-|数字|数组|
-|字符串|对象|
-|任意类型|map|
+|  键类型  | 数据类型 |
+| :------: | :------: |
+|   数字   |   数组   |
+|  字符串  |   对象   |
+| 任意类型 |   map    |
 
 在一些程序语言中，通常会存在两种不同的数组形式。
 
@@ -1913,4 +1913,3 @@ fuction myCallback(){
 }
 
 ```
-
